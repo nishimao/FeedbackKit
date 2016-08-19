@@ -85,7 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-FeedbackKit_Example/FeedbackKit.framework"
+  install_framework "Pods-FeedbackKit_Example/SlackKit.framework"
+  install_framework "Pods-FeedbackKit_Example/Starscream.framework"
+  install_framework "Pods-FeedbackKit_Example/Swifter.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-FeedbackKit_Example/FeedbackKit.framework"
+  install_framework "Pods-FeedbackKit_Example/SlackKit.framework"
+  install_framework "Pods-FeedbackKit_Example/Starscream.framework"
+  install_framework "Pods-FeedbackKit_Example/Swifter.framework"
 fi

@@ -2,4 +2,5 @@ use_frameworks!
 
 target 'FeedbackKit_Example' do
   pod 'FeedbackKit', :path => '../'
+  pod 'SlackKit'
 end
