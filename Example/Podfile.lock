@@ -1,0 +1,14 @@
+PODS:
+  - FeedbackKit (0.1.0)
+
+DEPENDENCIES:
+  - FeedbackKit (from `../`)
+
+EXTERNAL SOURCES:
+  FeedbackKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FeedbackKit: b635fc61d81e9cc16aa192eb9d7b38242247f629
+
+COCOAPODS: 0.39.0

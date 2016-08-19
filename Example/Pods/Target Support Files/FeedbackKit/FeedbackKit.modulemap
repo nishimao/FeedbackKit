@@ -1,0 +1,6 @@
+framework module FeedbackKit {
+  umbrella header "FeedbackKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

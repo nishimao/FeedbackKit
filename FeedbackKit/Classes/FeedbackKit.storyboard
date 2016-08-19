@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3QI-Hd-1wJ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Feedback View Controller-->
+        <scene sceneID="Siz-ui-zKb">
+            <objects>
+                <viewController id="3QI-Hd-1wJ" customClass="FeedbackViewController" customModule="FeedbackKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dOX-lY-rPC"/>
+                        <viewControllerLayoutGuide type="bottom" id="fxJ-Rj-awq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AJY-sn-7kz">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1v-yH-vLM">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ddS-Ga-OCM">
+                                        <rect key="frame" x="20" y="47" width="80" height="162"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="162" id="3tJ-SG-V2e"/>
+                                            <constraint firstAttribute="width" constant="80" id="Pmf-XO-mM1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="この画面についてのレポート" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qie-lz-Qj1">
+                                        <rect key="frame" x="20" y="20" width="260" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3If-5P-e3J">
+                                        <rect key="frame" x="110" y="47" width="170" height="162"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="162" id="6Nh-ea-Nxe"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="3QI-Hd-1wJ" id="nGG-FP-2ht"/>
+                                            <outlet property="delegate" destination="3QI-Hd-1wJ" id="uPO-g3-Zpa"/>
+                                        </connections>
+                                    </pickerView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="報告者名（必須）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Evn-Eu-GQS">
+                                        <rect key="frame" x="20" y="259" width="110" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="NaC-D5-fPs"/>
+                                            <constraint firstAttribute="width" constant="110" id="dNb-rO-NRe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="3QI-Hd-1wJ" id="fxP-BH-boZ"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ry-EH-eGj">
+                                        <rect key="frame" x="140" y="259" width="140" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.44705882349999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="jpX-wV-MgK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="送信する">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapSendButton:" destination="3QI-Hd-1wJ" eventType="touchUpInside" id="FCW-zW-GDQ"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="フリーコメント" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="miU-fG-2ng">
+                                        <rect key="frame" x="20" y="219" width="260" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Kdw-yl-bir"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="3QI-Hd-1wJ" id="6DB-5B-viv"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="3If-5P-e3J" firstAttribute="top" secondItem="qie-lz-Qj1" secondAttribute="bottom" constant="10" id="1fe-fa-DEp"/>
+                                    <constraint firstItem="0ry-EH-eGj" firstAttribute="leading" secondItem="Evn-Eu-GQS" secondAttribute="trailing" constant="10" id="3Ky-mK-S4h"/>
+                                    <constraint firstAttribute="trailing" secondItem="miU-fG-2ng" secondAttribute="trailing" constant="20" id="7Wg-ki-Npe"/>
+                                    <constraint firstItem="0ry-EH-eGj" firstAttribute="top" secondItem="miU-fG-2ng" secondAttribute="bottom" constant="10" id="Bk1-zC-h5s"/>
+                                    <constraint firstItem="miU-fG-2ng" firstAttribute="top" secondItem="3If-5P-e3J" secondAttribute="bottom" constant="10" id="Drf-qR-OJA"/>
+                                    <constraint firstItem="miU-fG-2ng" firstAttribute="leading" secondItem="c1v-yH-vLM" secondAttribute="leading" constant="20" id="J9O-dT-d4R"/>
+                                    <constraint firstAttribute="trailing" secondItem="3If-5P-e3J" secondAttribute="trailing" constant="20" id="RuJ-41-rfI"/>
+                                    <constraint firstItem="qie-lz-Qj1" firstAttribute="top" secondItem="c1v-yH-vLM" secondAttribute="top" constant="20" id="gaI-UC-Zpt"/>
+                                    <constraint firstItem="ddS-Ga-OCM" firstAttribute="leading" secondItem="c1v-yH-vLM" secondAttribute="leading" constant="20" id="ghb-Yp-U48"/>
+                                    <constraint firstItem="qie-lz-Qj1" firstAttribute="leading" secondItem="c1v-yH-vLM" secondAttribute="leading" constant="20" id="iiQ-28-nfi"/>
+                                    <constraint firstItem="Evn-Eu-GQS" firstAttribute="leading" secondItem="c1v-yH-vLM" secondAttribute="leading" constant="20" id="ikV-2l-rFb"/>
+                                    <constraint firstItem="ddS-Ga-OCM" firstAttribute="top" secondItem="qie-lz-Qj1" secondAttribute="bottom" constant="10" id="qiz-Sb-kpp"/>
+                                    <constraint firstItem="3If-5P-e3J" firstAttribute="leading" secondItem="ddS-Ga-OCM" secondAttribute="trailing" constant="10" id="tbs-fi-Pu7"/>
+                                    <constraint firstItem="Evn-Eu-GQS" firstAttribute="top" secondItem="miU-fG-2ng" secondAttribute="bottom" constant="10" id="yZK-x9-vlN"/>
+                                    <constraint firstAttribute="trailing" secondItem="0ry-EH-eGj" secondAttribute="trailing" constant="20" id="z0a-zW-W7Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="qie-lz-Qj1" secondAttribute="trailing" constant="20" id="zdV-IO-WOl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c1v-yH-vLM" firstAttribute="top" secondItem="AJY-sn-7kz" secondAttribute="top" id="Lf4-Yx-JK1"/>
+                            <constraint firstAttribute="bottom" secondItem="c1v-yH-vLM" secondAttribute="bottom" id="QBd-JY-fbh"/>
+                            <constraint firstItem="c1v-yH-vLM" firstAttribute="leading" secondItem="AJY-sn-7kz" secondAttribute="leading" id="Z7H-sf-O7D"/>
+                            <constraint firstAttribute="trailing" secondItem="c1v-yH-vLM" secondAttribute="trailing" id="rM4-XL-N05"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="300"/>
+                    <connections>
+                        <outlet property="freeCommentTextField" destination="miU-fG-2ng" id="eOI-BQ-c49"/>
+                        <outlet property="picker" destination="3If-5P-e3J" id="6zd-pQ-SgT"/>
+                        <outlet property="reporterField" destination="Evn-Eu-GQS" id="w2f-9Q-a7X"/>
+                        <outlet property="screenImageView" destination="ddS-Ga-OCM" id="cQ5-iJ-Eei"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zf-GW-J9t" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="375"/>
+        </scene>
+    </scenes>
+</document>
