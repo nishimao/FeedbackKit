@@ -10,13 +10,13 @@ import UIKit
 import CoreGraphics
 
 public struct SendInformation {
-    var selectedTitle: String?
-    var comment: String?
-    var captureImage: UIImage?
-    var reporterName: String?
-    var className: String?
+    public var selectedTitle: String?
+    public var comment: String?
+    public var captureImage: UIImage?
+    public var reporterName: String?
+    public var className: String?
     
-    var feedbackBodyMessage: String {
+    public var feedbackBodyMessage: String {
         get {
             var bodyMessage = ""
             if let selectedTitle = selectedTitle {
@@ -35,7 +35,7 @@ public struct SendInformation {
         }
     }
     
-    var captureImageData: NSData? {
+    public var captureImageData: NSData? {
         get {
             guard let captureImage = captureImage else {
                 return nil
