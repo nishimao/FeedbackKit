@@ -6,6 +6,7 @@ feedback tool for iOS app
 ## Feature
 - [x]Send feedback by mail
 - [x]Send feedback by custom action
+- [ ]Mask privacy info before getting screen capture
 
 You can also send feedback to a platform, such as Slack by using custom action.
 
