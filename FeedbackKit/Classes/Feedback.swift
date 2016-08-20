@@ -57,10 +57,12 @@ public enum Feedback {
             FeedbackViewController.presentFeedbackViewController(callerViewController, action: { (feedbackViewController: FeedbackViewController, sendInformation: SendInformation) in
 
                 let success: (()->Void) = {
-                    // dismiss feedbackview
-                    feedbackViewController.dismissFeedbackViewController()
-                    // callback
-                    dismissed()
+                    dispatch_async(dispatch_get_main_queue(), {
+                        // dismiss feedbackview
+                        feedbackViewController.dismissFeedbackViewController()
+                        // callback
+                        dismissed()
+                    })
                 }
 
                 // execute custom action
