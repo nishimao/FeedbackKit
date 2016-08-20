@@ -1,6 +1,8 @@
 # FeedbackKit
 feedback tool for iOS app
 
+![](./send_feedback_mail.gif)
+
 ## Feature
 - [x]Send feedback by mail
 - [x]Send feedback by custom action
@@ -24,12 +26,9 @@ To integrate FeedbackKit into your Xcode project using CocoaPods, specify it in 
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
 use_frameworks!
 
-target '<Your Target Name>' do
-    pod 'FeedbackKit', '~> 1.0'
-end
+pod 'FeedbackKit'
 ```
 
 Then, run the following command:
@@ -39,22 +38,7 @@ $ pod install
 ```
 
 ### Carthage
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
-
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-```bash
-$ brew update
-$ brew install carthage
-```
-
-To integrate FeedbackKit into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "nishimao/FeedbackKit" ~> 1.0
-```
-
-Run `carthage update` to build the framework and drag the built `Alamofire.framework` into your Xcode project.
+Comming soon (Welcome Pull Request)
 
 ## Usage
 ### Show feedback-view for sending feedback to one user by Email
@@ -128,10 +112,7 @@ Feedback.Custom { (feedbackViewController, sendInformation, success) in
     guard let client: Client = bot.clients[token] else {
         return
     }
-    guard let uploadImage = sendInformation.captureImage else {
-        return
-    }
-    guard let imageData = UIImagePNGRepresentation(uploadImage) else {
+    guard let imageData = sendInformation.captureImageData else {
         return
     }
 
@@ -153,7 +134,7 @@ Feedback.Custom { (feedbackViewController, sendInformation, success) in
                 attachments: [attachment],
                 success: { (complete:(ts: String?, channel: String?)) in
                     print("## message success ")
-                    success() // important method
+                    success() // important method. need to call this method for dismiss feedback view
                 }, failure: { (error) in
                     print("## message fail \(error)")
             })
