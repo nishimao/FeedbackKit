@@ -1,6 +1,8 @@
 # FeedbackKit
 feedback tool for iOS app
 
+![](./send_feedback_mail.gif)
+
 ## Feature
 - [x]Send feedback by mail
 - [x]Send feedback by custom action

@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     @IBAction func showFeedbackViewController(sender: AnyObject) {
 
         // show feedback view by myself
-        let emailConifg = Feedback.EmailConfig(to: "hoge@hogehogehoge.jp")
+        let emailConifg = Feedback.EmailConfig(to: "nishi.nds@gmail.com")
         Feedback.Email(emailConfig: emailConifg).show { 
             print("dismissed")
         }
