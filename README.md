@@ -39,7 +39,7 @@ $ pod install
 ```
 
 ### Carthage
-Comming soon (Welcome Pull Request)
+Coming soon (Welcome Pull Request)
 
 ## Usage
 ### Show feedback-view for sending feedback to one user by Email
